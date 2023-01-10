@@ -10,4 +10,10 @@ The notes are often accompanied by screenshots of me putting into practice what 
 
 I review the notes in line with the super helpful [SM-2 spaced repetition schedule](https://www.lifehack.org/851026/spaced-repetition) - highly recommended! As I review notes, I'll correct any spelling/grammar errors and revise bits of information as my knowledge progresses. 
 
+## How to use this project
+
 Hopefully you can use this as inspiration to create your own study note portfolio (it's a brilliant learning tool). Or perhaps to be convinced that I'm diligent and determined enough to make an excellent addition to your project :)
+
+## Credits
+
+Layout of this file inspired by [freecodecamp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/).
