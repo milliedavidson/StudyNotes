@@ -94,7 +94,7 @@ The >> outputs contents to where you specify. So this would put the text “Name
 
 Check <span style="color:#54DBB1">git status</span>
 
-![Checking Git status](2023-01-10-21-28-19.png)
+![Checking Git status](Git-and-GitHub-notes/2023-01-10-21-28-19.png)
  
 If untracked file, means not been added to Git yet. Need to tell Git about it!!
 
@@ -367,4 +367,5 @@ And it pushed in about 10 seconds! Success!
 [GitHub - merge conflicts guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
 
 [Stack Overflow - Git push taking ages](https://stackoverflow.com/questions/31895557/git-push-taking-ages)
-<!--opt + cmd + v to paste from clipboard directly to markdown doc-->
+
+<!--![](2023-01-11-14-07-19.png) image links are broken in github .md doc. look at this: https://github.com/hemangsk/Gravity/issues/1>
