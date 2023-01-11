@@ -347,8 +347,24 @@ Once conflicts resolved, git status will say there's an untracked file - that's 
 <br>
 <br>
 
+## **Pushing & pulling**
+
+I'd added a lot of screenshots to this file and when I went to push it to GitHub, it was taking forever. It seemed like it was doing nothing at all.
+
+I increased the **post buffer** size - <span style="color:#54DBB1">git config --global http.postBuffer 524288000</span>
+
+Checked it configured correctly - <span style="color:#54DBB1">git config --get http.postBuffer</span>
+
+![Increasing and checking post buffer size](2023-01-11-13-39-08.png)
+
+And it pushed in about 10 seconds! Success!
+
+<br>
+<br>
+
 ## **Credits** 
 
 [GitHub - merge conflicts guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
 
+[Stack Overflow - Git push taking ages](https://stackoverflow.com/questions/31895557/git-push-taking-ages)
 <!--opt + cmd + v to paste from clipboard directly to markdown doc-->
