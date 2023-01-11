@@ -1,0 +1,267 @@
+# **Git & GitHub**
+
+## **Intro**
+
+Source control types:
+**centralised & decentralised/distributed**
+
+**Centralised** - needs internet connection to access the server with everything one
+
+**Decentralised/distributed** - Mercurial (hg), Git. Most operations are local, so not internet dependent. Central server not required. 
+
+Linus Torvalds created Git to help with developing Linux
+
+<br>
+<br>
+
+## **Git Workflow**
+
+1. **WORKING DIRECTORY** - the local storage that holds all your files for the repository. Git is aware of them whether they are used in Git or not. There’s a hidden folder called .git that contains the ACTUAL git repository. This is where the commits are
+
+<br>
+
+2.	**STAGING AREA/GIT INDEX** - holding area for queuing up changes for the next commit. Can move files in and out of here freely without affecting the Git repository
+
+<br>
+
+3.	**COMMIT TO REPOSITORY** (the hidden .git folder) - final changes saved
+
+<br>
+
+4.	**REMOTE REPOSITORY** - Github. Online version of Git basically. 
+
+<br>
+
+Branches - timelines that contain your changes. Default branch is MAIN
+
+<br>
+<br>
+
+## **Configure Git**
+ <span style="color:#54DBB1">git config --global user.name “Millie Davidson” 
+ <br> git config --global user.email “millieaavidson@hotmail.com”</span>
+
+<br>
+
+Check it’s stored this: <span style="color:#54DBB1">Git config --global --list</span>
+
+![Git configuration in Terminal](GitAndGitHub1.png)
+
+<br>
+<br>
+
+## **Set up remote & local repositories**
+
+1.	Make your repository on GitHub first
+
+<br>
+
+2.	Clone it using HTTPS clone URL link (click the green code button in repository): 
+
+![Picture of HTTPS clone URL link](../images/4812c3c1e6513a28d61177ae6c27933d8812e6b8f7cbb60564cbded8b4051b4f.png)  
+ 
+Go to your computer’s terminal:
+<br>
+ <span style="color:#54DBB1">cd</span> to the directory you want to put the repository in 
+ <br>
+ <span style="color:#54DBB1">git clone www.github.com/put-repository-link-here.git</span>
+
+![Cloning a GitHub repository](GitAndGitHub3.png)  
+
+Git copies your GitHub repository to your local system. Confirm it’s now there with  <span style="color:#54DBB1">ls</span>. You should see the README.md file in there:
+
+![Finding the README file in Terminal](2023-01-10-21-15-00.png)
+
+Always start in the repository folder you are working on. Good idea to start with a clean working tree by checking git status. Pull any changes BEFORE pushing.
+
+In terminal: <span style="color:#54DBB1">git status</span> will tell you which branch you’re on.
+
+![Picture of Git status in Terminal](2023-01-10-21-22-32.png)
+
+^^ this means it’s up to date with the GitHub branch
+
+<br>
+
+3.	Check it works:
+
+Make sure you’re in repository folder. 
+
+<span style="color:#54DBB1">echo “Name of Your Repository” >> test.txt</span>
+
+The >> outputs contents to where you specify. So this would put the text “Name of Your Repository” into the test.txt file. Check file has been made with <span style="color:#54DBB1">ls</span>. 
+
+<span style="color:#54DBB1">cat text.txt</span> to view contents of file
+
+Check <span style="color:#54DBB1">git status</span>
+
+![Checking Git status](2023-01-10-21-28-19.png)
+ 
+If untracked file, means not been added to Git yet. Need to tell Git about it!!
+
+<br>
+<br>
+
+4.	<span style="color:#54DBB1">git add name-of-file-here.txt</span> or <span style="color:#54DBB1">git add .</span> (called recursive add??) for all the untracked files
+
+Can add to staging area AND commit in one go - <span style="color:#54DBB1">git commit -am “commit message here”</span>. Can only be done with **tracked files**. Modified files are added to index, then committed. 
+
+Check <span style="color:#54DBB1">git status</span>
+
+![Adding to index and checking Git status](2023-01-10-21-32-10.png)
+
+Tells us changes are in the staging area, ready to be committed. Staging area designed to build up a bunch of changes to be committed as one
+
+<br>
+
+5.	Commit changes 
+<span style="color:#54DBB1">git commit -m “your commit message here”</span>
+
+![Commit being made with a message](2023-01-10-21-41-08.png)
+
+<span style="color:#54DBB1">git status</span>
+
+![Git status after commit made](2023-01-10-21-46-08.png)
+
+If everything up to date, will say “Working tree clean”. Now in the third stage. This git command is a LOCAL COMMAND, so it won’t be on GitHub yet. 
+
+<br>
+<br>
+
+6.	Push changes to GitHub
+
+Remember to pull before pushing!
+
+In terminal:
+<span style="color:#54DBB1">git push origin main</span>
+ 
+![Git push origin main in action](2023-01-10-22-05-06.png)
+
+The origin refers to the remote copy (so in this case, GitHub). Main is the branch we want to push. You’ll be prompted for your username and password (I guess this is why people set up tokens?). Although I’m never prompted for some reason?
+
+I got an error as my email was private:
+"remote: error: GH007: Your push would publish a private email address.
+remote: You can make your email public or disable this protection by visiting:
+remote: http://github.com/settings/emails"
+
+Went to the link and turned off this setting
+
+![Keep my email address private checkbox](2023-01-10-22-07-18.png)
+ 
+All good now
+
+![Git push origin main successful attempt](2023-01-10-22-08-01.png)
+ 
+Verify changes have been successfully made to GitHub by refreshing and checking it there. 
+
+![Test file added to GitHub repository](2023-01-10-22-08-55.png)
+
+<br>
+<br>
+
+## **General Git commands**
+
+<span style="color:#54DBB1">git init project-name-here</span> or <span style="color:#54DBB1">git init</span> in the folder you want it in - makes an empty git repository locally 
+
+<span style="color:#54DBB1">ls -al</span> - lists ALL files and folders incl, dot files & folders. You’ll see the .git folder where the git repository lives. 
+
+Root-commit message - tells us this is first commit in the repository 
+
+<span style="color:#54DBB1">cd ..</span> - goes back a directory 
+
+<span style="color:#54DBB1">~</span> tilde goes to home directory~
+
+<span style="color:#54DBB1">~ unzip /Downloads/name-of-file.zip</span> - unzips a zip file
+
+<!--Fork button on the GitHub repository copies someone else’s repository to your own account so you can work on it?-->
+
+<span style="color:#54DBB1">Git pull origin main - updates git repository with and changes on the remote repository
+ 
+ALWAYS pull before pushing!
+Tracked files = any file committed into the git repository, index or staging area. Git is aware of it and tracking 
+git ls-files 
+Lists all files that git is tracking in the current repository 
+ mkdir make a directory (folder)
+For changes that span multiple files, add to staging area and then commit when finished
+Logs/history:
+git help log  - shows Git commit history. Top is the last commit you did, working backwards in time as you go down. Press q to exit.
+When you commit, terminal will show something like: master ba5b0f0. This weird number is the SHA-1 identifier for the commit. 
+git log --abbrev-commit will shorten the commit identifier. Usually only need the first 6/7 characters to uniquely identify a commit (though this grows as your commits do). 
+git log --oneline --graph --decorate oneline puts entries on one line. Graph brings up ASCII graph, showing branching graph. Decorate adds la-bels/tags/annotations.
+git log ae6f872…761b911 shows you the specified range of commits.
+git log --since=“3 days ago” shows the commits that have happened in last 3 days.
+git log -- file-name.txtall the commits that involve this specific file. 
+git log --follow -- path/to/file.txt shows commit history for that specific file, go-ing through the renames. 
+git show b1986eB63817c7 shows the specified commit with all the details INCL. diff information (what has changed).
+Deleting/unstaging changes:
+To UNstage changes (put it back in your local working directory)
+git reset HEAD file-name-here.txt
+If you delete a file and then unstage that deletion, it won’t appear in your work-ing directory, it’s only back in git staging area. Use the git checkout command be-low:
+git checkout -- file-name-here.txt
+Discards changes in the working directory. i.e you’ve deleted your changes from EVERYWHERE and are back on the previous commited version. Check git sta-tus and you’ll be back to a clean working tree
+Deleting files - if they aren’t tracked by git, git rm file.txt won’t work. So delete normally with rm file.txt
+rm -rf .git removes the git folder, thereby removing all traces on git for the re-pository. r recursive and f force deletion. Take CAUTION with this command!
+Renaming & moving files:
+git mv file-name-here.txt new-file-name-here.txt
+Check git status and it’s staged the file name change for you! Note, it hasn’t been committed though. Good idea to rename files BEFORE making changes.
+git mv file-name.txt folder-name
+This moves it to the specified folder (if it was same file type, it would write over it?)
+If you rename in Bash (terminal) or in Finder (normally) instead of through Git (e.g mv file.txt newfile.txt instead of git mv file.txt newfile.txt), Git sees this as TWO changes - file.txt has been deleted and newfile.txt is a new, untracked file. Sort this with git add -A. Git status will see you just renamed the file and update ac-cordingly. 
+There might be a ../.DSstore file that appears when renaming in Finder (just an OS file we don’t want to track). Just git add file-here.txt . Might want to update the index too git add -u
+Git alias:
+Instead of typing git log --all --graph --decorate --oneline to get a neat view, can create your own command for this called a Git alias. Check if the common al-ready exists by typing it in (will say if doesn’t exist). 
+git config --global alias.name-of-command-here “ --all --commands --you-want-included --here” global makes it available in EVERY repository i.e all of Git
+To modify aliases, need to open git config file so:
+mate  will open it up in TextMate
+Alias will be under alias section and modify there
+Untracking files:
+If don’t already have a .gitignore file (check with ls), make one:
+mate .gitignore
+ 
+Patterns included:
+-	specific file e.g. a-file.ext
+-	file pattern e.g. .ext
+-	folder e.g. my-folder/
+Just write whatever file/folder/pattern it is (one per line) and done. NOTE .gitignore file needs adding to Git for version control git add .gitignore git commit -m “message” pull then push
+Branching:
+Don’t do everything on main!! Make feature/topic branches to isolate changes. Integrate them into main branch once stabilised. Branches are just labels/pointers 
+git branch -a 
+Lists local and remote branches. There will be an Asterix by current active branch
+ 
+git branch new-branch-here makes a new branch
+ 
+git checkout new-branch-hereswitches branches to the specified one
+ 
+git branch -m my-new-branch new-branch -m moves i.e overwrites and renames the file (here, that would rename to new-branch)
+git branch -d new-branch  deletes branch. Can’t delete a branch you’re al-ready on, FYI!
+git checkout -b new-branch-name creates new branch AND checks out i.e. switches you to that branch
+Merging:
+Merging changes: REVIEW them first!
+ git diff main develop first reference branch + second reference branch. Shows you differences between those two branches. 
+ 
+git difftool main develop brings up visual merge differences, like you see on GitHub
+git merge develop source branch I want merged into my current branch. Can delete that branch after merge. This is fast-forwarding. 
+ 
+I did this one time and got a merge conflict:
+ 
+Clicked “resolve in merge editor” in my text editor:
+  
+Found the conflict:
+ 
+Clicked “accept incoming” on the part I wanted to commit. Clicked “complete merge”
+ 
+Checked git status and all good to try merging develop to main again:
+ 
+Got the error message again!
+ 
+Think I forgot to commit the merge. Did this is Visual Studio Code source control. Then synced changes in same place. All good now.
+Credits to GitHub https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line
+git merge develop --no-ff you get a merge commit. So the merge is backed up in case you want to undo it?
+git merge develop -m “Commit message here”
+Automatic merge with automatic merge commit. Useful for adding a modified file to that branch?
+If you do changes on one file on one branch and then more changes on same file in main branch, there will be conflicts. Can happen with multiple people work-ing on same repository. 
+57 - 2 mins 21
+https://spartaglobal.udemy.com/course/git-complete/learn/lecture/1948562#overview
+
+<!--default text editor will pop up so you can do multiple line commit messages-->
+
+<!--opt + cmd + v to paste from clipboard directly to markdown doc-->
