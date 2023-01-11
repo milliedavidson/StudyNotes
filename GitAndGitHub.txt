@@ -45,7 +45,7 @@ Branches - timelines that contain your changes. Default branch is MAIN
 
 Check it’s stored this: <span style="color:#54DBB1">Git config --global --list</span>
 
-![Git configuration in Terminal](Git-and-GitHub-notes/Screenshots/GitAndGitHub1.png)
+![Git configuration in Terminal](./Git-and-GitHub-notes/Screenshots/GitAndGitHub1.png)
 
 <br>
 <br>
