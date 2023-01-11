@@ -174,94 +174,181 @@ Root-commit message - tells us this is first commit in the repository
 
 <!--Fork button on the GitHub repository copies someone else’s repository to your own account so you can work on it?-->
 
-<span style="color:#54DBB1">Git pull origin main - updates git repository with and changes on the remote repository
+<span style="color:#54DBB1">Git pull origin main - updates git repository with your changes on the remote repository</span>
+
+![Git pull origin main in Terminal](2023-01-11-09-27-08.png)
+
+**ALWAYS pull before pushing!**
+
+Tracked files - any file committed into the git repository, index or staging area. Git is aware of it and tracking
+
+<span style="color:#54DBB1">git ls-files</span> - lists all files that git is tracking in the current repository 
+
+<span style="color:#54DBB1">mkdir</span> - make a directory (folder)
+
+For changes that span multiple files, add to staging area and then commit when finished is a good idea
+
+<br>
+<br>
+
+## **Logs/history**
+
+<span style="color:#54DBB1">git help log</span> - shows Git commit history. Top is the last commit you did, working backwards in time as you go down. Press q to exit.
+
+When you commit, Terminal will show something like: master ba5b0f0. This number is the SHA-1 identifier for the commit. 
+
+<span style="color:#54DBB1">git log --abbrev-commit</span> - will shorten the commit identifier. Usually only need the first 6/7 characters to uniquely identify a commit (though this grows as your commits do). 
+
+<span style="color:#54DBB1">git log --oneline --graph --decorate</span> - oneline puts entries on one line. Graph brings up ASCII graph, showing branching graph. Decorate adds labels/tags/annotations.
+
+<span style="color:#54DBB1">git log ae6f872…761b911</span> - put the SHA identifiers in, shows you the specified range of commits.
+
+<span style="color:#54DBB1">git log --since=“3 days ago”</span> - shows the commits that have happened in last 3 days.
+
+<span style="color:#54DBB1">git log -- file-name.txt</span> - all the commits that involve this specific file. 
+
+<span style="color:#54DBB1">git log --follow -- path/to/file.txt</span> - shows commit history for that specific file, going through the renames. 
+
+<span style="color:#54DBB1">git show b1986eB63817c7</span> - shows the specified commit with all the details INCL. diff information (what has changed).
+
+<br>
+<br>
+
+## **Deleting/unstaging changes**
+
+To **unstage** changes (put it back in your local working directory) - <span style="color:#54DBB1">git reset HEAD file-name-here.txt</span>
+
+If you delete a file and then unstage that deletion, it won’t appear in your working directory (it's not an undo function :(). It’s only back in git staging area. Use the git checkout command - <span style="color:#54DBB1"> git checkout -- file-name-here.txt</span>
+
+Discards changes in the working directory. i.e you’ve deleted your changes from EVERYWHERE and are back on the previous committed version. Check git status and you’ll be back to a clean working tree
+
+Deleting files: if they aren’t tracked by git <span style="color:#54DBB1">git rm file.txt</span> won’t work. So delete normally with <span style="color:#54DBB1">rm file.txt</span>
+
+<span style="color:#54DBB1">rm -rf .git</span> - removes the git folder, thereby removing all traces on git for the repository. <span style="color:#54DBB1">r</span> means recursive and <span style="color:#54DBB1">f</span> is force deletion. **Take CAUTION with this command!**
+
+<br>
+<br>
+
+## **Renaming & moving files**
+
+<span style="color:#54DBB1">git mv file-name-here.txt</span> - new-file-name-here.txt - it’s staged the file name change for you! Note, it hasn’t been *committed* though. Good idea to rename files **BEFORE** making changes.
+
+<span style="color:#54DBB1">git mv file-name.txt folder-name</span> - this moves it to the specified folder (if it was same file type, it would write over it?)
+
+If you rename in Bash (Terminal) or in Finder (normally) instead of through Git (e.g <span style="color:#54DBB1">mv file.txt newfile.txt</span> instead of <span style="color:#54DBB1">git mv file.txt newfile.txt</span>), Git sees this as TWO changes - file.txt has been deleted and newfile.txt is a new, untracked file. Sort this with <span style="color:#54DBB1">git add -A</span>. Git status will see you just renamed the file and update accordingly. 
+
+There might be a ../.DS_store_ file that appears when renaming in Finder (just an OS file we don’t want to track). Just <span style="color:#54DBB1">git add file-here.txt</span> . Might want to update the index too - <span style="color:#54DBB1">git add -u</span>
+
+<br>
+<br>
+
+## **Git alias**
+
+Instead of typing <span style="color:#54DBB1">git log --all --graph --decorate --oneline</span> to get a neat view, can create your own command for this called a **Git alias**. Check if the command already exists by typing it in (will say if doesn’t exist). 
+
+<span style="color:#54DBB1">git config --global alias.name-of-command-here “--all --commands --you-want-included --here”</span> - global makes it available in EVERY repository i.e all of Git
+
+To modify aliases, need to open git config file - <span style="color:#54DBB1">mate ~/.gitconfig</span> will open it up in TextMate to edit. A text editor is handy for multiple line commits too.
+
+Alias will be under alias section; modify it there
+
+<br>
+<br>
+
+## **Untracking files**
+
+If don’t already have a .gitignore file (check with <span style="color:#54DBB1">ls</span>), make one with your text editor - <span style="color:#54DBB1">mate .gitignore</span>
+
+![Checking for a git ignore file in Terminal](2023-01-11-10-23-33.png)
  
-ALWAYS pull before pushing!
-Tracked files = any file committed into the git repository, index or staging area. Git is aware of it and tracking 
-git ls-files 
-Lists all files that git is tracking in the current repository 
- mkdir make a directory (folder)
-For changes that span multiple files, add to staging area and then commit when finished
-Logs/history:
-git help log  - shows Git commit history. Top is the last commit you did, working backwards in time as you go down. Press q to exit.
-When you commit, terminal will show something like: master ba5b0f0. This weird number is the SHA-1 identifier for the commit. 
-git log --abbrev-commit will shorten the commit identifier. Usually only need the first 6/7 characters to uniquely identify a commit (though this grows as your commits do). 
-git log --oneline --graph --decorate oneline puts entries on one line. Graph brings up ASCII graph, showing branching graph. Decorate adds la-bels/tags/annotations.
-git log ae6f872…761b911 shows you the specified range of commits.
-git log --since=“3 days ago” shows the commits that have happened in last 3 days.
-git log -- file-name.txtall the commits that involve this specific file. 
-git log --follow -- path/to/file.txt shows commit history for that specific file, go-ing through the renames. 
-git show b1986eB63817c7 shows the specified commit with all the details INCL. diff information (what has changed).
-Deleting/unstaging changes:
-To UNstage changes (put it back in your local working directory)
-git reset HEAD file-name-here.txt
-If you delete a file and then unstage that deletion, it won’t appear in your work-ing directory, it’s only back in git staging area. Use the git checkout command be-low:
-git checkout -- file-name-here.txt
-Discards changes in the working directory. i.e you’ve deleted your changes from EVERYWHERE and are back on the previous commited version. Check git sta-tus and you’ll be back to a clean working tree
-Deleting files - if they aren’t tracked by git, git rm file.txt won’t work. So delete normally with rm file.txt
-rm -rf .git removes the git folder, thereby removing all traces on git for the re-pository. r recursive and f force deletion. Take CAUTION with this command!
-Renaming & moving files:
-git mv file-name-here.txt new-file-name-here.txt
-Check git status and it’s staged the file name change for you! Note, it hasn’t been committed though. Good idea to rename files BEFORE making changes.
-git mv file-name.txt folder-name
-This moves it to the specified folder (if it was same file type, it would write over it?)
-If you rename in Bash (terminal) or in Finder (normally) instead of through Git (e.g mv file.txt newfile.txt instead of git mv file.txt newfile.txt), Git sees this as TWO changes - file.txt has been deleted and newfile.txt is a new, untracked file. Sort this with git add -A. Git status will see you just renamed the file and update ac-cordingly. 
-There might be a ../.DSstore file that appears when renaming in Finder (just an OS file we don’t want to track). Just git add file-here.txt . Might want to update the index too git add -u
-Git alias:
-Instead of typing git log --all --graph --decorate --oneline to get a neat view, can create your own command for this called a Git alias. Check if the common al-ready exists by typing it in (will say if doesn’t exist). 
-git config --global alias.name-of-command-here “ --all --commands --you-want-included --here” global makes it available in EVERY repository i.e all of Git
-To modify aliases, need to open git config file so:
-mate  will open it up in TextMate
-Alias will be under alias section and modify there
-Untracking files:
-If don’t already have a .gitignore file (check with ls), make one:
-mate .gitignore
+Patterns for .gitignore file:
+-	Specific file e.g. **a-file.ext**
+-	File pattern e.g. **.ext**
+-	Folder e.g. **millie/my-folder**
+
+Just write whatever file/folder/pattern it is (**one per line**) and done. NOTE .gitignore file needs adding to Git for version control (<span style="color:#54DBB1">git add .gitignore</span> and <span style="color:#54DBB1">git commit -m “message here”</span>). Pull then push!
+
+<br>
+<br>
+
+## **Branching**
+
+Don’t do everything on main!! Make **feature/topic branches** to isolate changes. Integrate them into main branch only once stabilised. Branches are just labels/pointers.
+
+<span style="color:#54DBB1">git branch -a</span> - lists local and remote branches. There will be an asterisk by current active branch
+
+![Picture of which branch I'm on](2023-01-11-11-20-16.png)
  
-Patterns included:
--	specific file e.g. a-file.ext
--	file pattern e.g. .ext
--	folder e.g. my-folder/
-Just write whatever file/folder/pattern it is (one per line) and done. NOTE .gitignore file needs adding to Git for version control git add .gitignore git commit -m “message” pull then push
-Branching:
-Don’t do everything on main!! Make feature/topic branches to isolate changes. Integrate them into main branch once stabilised. Branches are just labels/pointers 
-git branch -a 
-Lists local and remote branches. There will be an Asterix by current active branch
+<span style="color:#54DBB1">git branch new-branch-here</span> - makes a new branch
+
+![New branch created in Terminal](2023-01-11-11-22-08.png)
  
-git branch new-branch-here makes a new branch
- 
-git checkout new-branch-hereswitches branches to the specified one
- 
-git branch -m my-new-branch new-branch -m moves i.e overwrites and renames the file (here, that would rename to new-branch)
-git branch -d new-branch  deletes branch. Can’t delete a branch you’re al-ready on, FYI!
-git checkout -b new-branch-name creates new branch AND checks out i.e. switches you to that branch
-Merging:
-Merging changes: REVIEW them first!
- git diff main develop first reference branch + second reference branch. Shows you differences between those two branches. 
- 
-git difftool main develop brings up visual merge differences, like you see on GitHub
-git merge develop source branch I want merged into my current branch. Can delete that branch after merge. This is fast-forwarding. 
- 
+<span style="color:#54DBB1">git checkout new-branch-here</span> - switches branches to the specified one
+
+![Switching branch with git checkout](2023-01-11-11-22-49.png)
+
+<span style="color:#54DBB1">git branch -m my-new-branch new-branch</span> - **-m** moves i.e overwrites and renames the file (here, that would rename to new-branch).
+
+<span style="color:#54DBB1">git branch -d new-branch</span> - deletes branch. Can’t delete a branch you’re already on, FYI!
+
+<span style="color:#54DBB1">git checkout -b new-branch-name</span> - creates new branch AND checks out i.e. creates branch and switches you to it
+
+<br>
+<br>
+
+## **Merging**
+
+When merging changes: **REVIEW them first!**
+
+<span style="color:#54DBB1">git diff main develop</span> - first reference branch + second reference branch. Shows you differences between those two branches. Hence the diff
+
+![Comparing branches with git diff](2023-01-11-11-27-23.png)
+
+<span style="color:#54DBB1">git difftool main develop</span> - brings up visual merge differences, like you see on GitHub.
+
+<span style="color:#54DBB1">git merge develop</span> - source branch I want merged into my ***current*** branch. Can delete that branch after merge. This is called fast-forwarding. 
+
+![Merging branch into current one](2023-01-11-11-29-11.png)
+
 I did this one time and got a merge conflict:
- 
+
+![](2023-01-11-11-30-07.png)
+
 Clicked “resolve in merge editor” in my text editor:
+
+![](2023-01-11-11-30-37.png)
   
 Found the conflict:
- 
-Clicked “accept incoming” on the part I wanted to commit. Clicked “complete merge”
- 
-Checked git status and all good to try merging develop to main again:
- 
-Got the error message again!
- 
-Think I forgot to commit the merge. Did this is Visual Studio Code source control. Then synced changes in same place. All good now.
-Credits to GitHub https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line
-git merge develop --no-ff you get a merge commit. So the merge is backed up in case you want to undo it?
-git merge develop -m “Commit message here”
-Automatic merge with automatic merge commit. Useful for adding a modified file to that branch?
-If you do changes on one file on one branch and then more changes on same file in main branch, there will be conflicts. Can happen with multiple people work-ing on same repository. 
-57 - 2 mins 21
-https://spartaglobal.udemy.com/course/git-complete/learn/lecture/1948562#overview
 
-<!--default text editor will pop up so you can do multiple line commit messages-->
+![](2023-01-11-11-31-02.png)
+ 
+Clicked “accept incoming” on the part I wanted to commit. Clicked “complete merge”:
+
+![](2023-01-11-11-31-24.png)
+ 
+Checked git status - all good to try merging develop to main again:
+
+![](2023-01-11-11-32-06.png)
+
+Got the error message again!
+
+![](2023-01-11-11-32-41.png)
+
+Think I forgot to commit the merge 😂. Committed it in Visual Studio Code source control. Then synced changes in same place. All fixed now.
+
+<span style="color:#54DBB1">git merge develop --no-ff</span> - you get a merge commit. So the merge is backed up in case you want to undo it?
+
+<span style="color:#54DBB1">git merge develop -m “Commit message here”</span> - automatic merge with automatic merge commit
+
+If you do changes on one file on one branch and then more changes on same file in main branch, there will be conflicts. Can happen with multiple people working on the same repository. You'll be in a merging state, rather than clean, index etc.   
+
+Once conflicts resolved, git status will say there's an untracked file - that's the original file that Git saved before you resolved the conflicts. It'll end in **.orig**. Probably don't want to track this, so add to .gitignore.
+
+<br>
+<br>
+
+## **Credits** 
+
+[GitHub - merge conflicts guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
 
 <!--opt + cmd + v to paste from clipboard directly to markdown doc-->
