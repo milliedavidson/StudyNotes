@@ -2,6 +2,9 @@
 
 ## **Intro**
 
+A source/version control system. Vast majority of developers & organisations use Git. Some use SVN (Apache Subversion) but it's not that great.
+GitHub is the cloud version of Git. GitHub was originally an indepedent company, bought out by Microsoft in 2018.
+
 Source control types:
 **centralised & decentralised/distributed**
 
@@ -9,30 +12,34 @@ Source control types:
 
 **Decentralised/distributed** - Mercurial (hg), Git. Most operations are local, so not internet dependent. Central server not required. 
 
-Linus Torvalds created Git to help with developing Linux
+Linus Torvalds created Git to help with developing Linux (good way to remember this - he is a git 😁)
 
 <br>
 <br>
 
 ## **Git Workflow**
 
-1. **WORKING DIRECTORY** - the local storage that holds all your files for the repository. Git is aware of them whether they are used in Git or not. There’s a hidden folder called .git that contains the ACTUAL git repository. This is where the commits are
+### 1. **WORKING DIRECTORY**
+
+The local storage that holds all your files for the repository. Git is aware of them whether they are used in Git or not. There’s a hidden folder called .git that contains the ACTUAL git repository. This is where the commits are.
 
 <br>
 
-2.	**STAGING AREA/GIT INDEX** - holding area for queuing up changes for the next commit. Can move files in and out of here freely without affecting the Git repository
+### 2.	**STAGING AREA/GIT INDEX**
+
+Holding area for queuing up changes for the next commit. Can move files in and out of here freely without affecting the Git repository.
 
 <br>
 
-3.	**COMMIT TO REPOSITORY** (the hidden .git folder) - final changes saved
+### 3.	**COMMIT TO REPOSITORY** (the hidden .git folder)
+
+Final changes saved.
 
 <br>
 
-4.	**REMOTE REPOSITORY** - Github. Online version of Git basically. 
+### 4.	**REMOTE REPOSITORY**
 
-<br>
-
-Branches - timelines that contain your changes. Default branch is MAIN
+GitHub. Basically your online cloud backup.
 
 <br>
 <br>
@@ -52,11 +59,11 @@ Check it’s stored this: <span style="color:#54DBB1">Git config --global --list
 
 ## **Set up remote & local repositories**
 
-1.	Make your repository on GitHub first
+### 1.	Make your repository on GitHub first
 
 <br>
 
-2.	Clone it using HTTPS clone URL link (click the green code button in repository): 
+### 2.	Clone it using HTTPS clone URL link (click the green code button in repository): 
 
 ![Picture of HTTPS clone URL link](../images/4812c3c1e6513a28d61177ae6c27933d8812e6b8f7cbb60564cbded8b4051b4f.png)  
  
@@ -82,7 +89,7 @@ In terminal: <span style="color:#54DBB1">git status</span> will tell you which b
 
 <br>
 
-3.	Check it works:
+### 3.	Check it works:
 
 Make sure you’re in repository folder. 
 
@@ -101,7 +108,9 @@ If untracked file, means not been added to Git yet. Need to tell Git about it!!
 <br>
 <br>
 
-4.	<span style="color:#54DBB1">git add name-of-file-here.txt</span> or <span style="color:#54DBB1">git add .</span> (called recursive add??) for all the untracked files
+### 4. Add files to Index
+
+<span style="color:#54DBB1">git add name-of-file-here.txt</span> or <span style="color:#54DBB1">git add .</span> (called recursive add??) - adds all the untracked files. <span style="color:#54DBB1">git add .</span> or <span style="color:#54DBB1">git add *</span> - AVOID this when working on a project with others. Don't want to add everyone else's work too; it can get messy quickly.  
 
 Can add to staging area AND commit in one go - <span style="color:#54DBB1">git commit -am “commit message here”</span>. Can only be done with **tracked files**. Modified files are added to index, then committed. 
 
@@ -113,7 +122,8 @@ Tells us changes are in the staging area, ready to be committed. Staging area de
 
 <br>
 
-5.	Commit changes 
+### 5.	Commit changes 
+
 <span style="color:#54DBB1">git commit -m “your commit message here”</span>
 
 ![Commit being made with a message](2023-01-10-21-41-08.png)
@@ -127,9 +137,9 @@ If everything up to date, will say “Working tree clean”. Now in the third st
 <br>
 <br>
 
-6.	Push changes to GitHub
+### 6.	Push changes to GitHub
 
-Remember to pull before pushing!
+***Remember to pull before pushing!***
 
 In terminal:
 <span style="color:#54DBB1">git push origin main</span>
@@ -172,7 +182,7 @@ Root-commit message - tells us this is first commit in the repository
 
 <span style="color:#54DBB1">~ unzip /Downloads/name-of-file.zip</span> - unzips a zip file
 
-<!--Fork button on the GitHub repository copies someone else’s repository to your own account so you can work on it?-->
+<!--Fork button on the GitHub repository copies someone else’s repository to your own account so you can work on it? Check this-->
 
 <span style="color:#54DBB1">Git pull origin main - updates git repository with your changes on the remote repository</span>
 
@@ -273,7 +283,9 @@ Just write whatever file/folder/pattern it is (**one per line**) and done. NOTE 
 
 ## **Branching**
 
-Don’t do everything on main!! Make **feature/topic branches** to isolate changes. Integrate them into main branch only once stabilised. Branches are just labels/pointers.
+Timelines that contain your changes. Default branch is MAIN (still called Master sometimes).
+
+Don’t do everything on main!! Make **feature/topic/develop/sprint branches** to isolate changes. Integrate them into main branch only once stabilised. Branches are just labels/pointers.
 
 <span style="color:#54DBB1">git branch -a</span> - lists local and remote branches. There will be an asterisk by current active branch
 
@@ -347,9 +359,16 @@ Once conflicts resolved, git status will say there's an untracked file - that's 
 <br>
 <br>
 
+## **Merge conflicts!**
+
+COMMUNICATE WITH YOUR TEAM. Discuss and work out who is doing what, when etc. Everyone has their *own branch* to work on. Don't work on the same file as anyone else - if lots of work needed on a single file, pair up.
+
+<br>
+<br>
+
 ## **Pushing & pulling**
 
-I'd added a lot of screenshots to this file and when I went to push it to GitHub, it was taking forever. It seemed like it was doing nothing at all.
+I'd added a lot of screenshots to this file and when I went to push it to GitHub, it was taking forever. It seemed like it was just hanging.
 
 I increased the **post buffer** size - <span style="color:#54DBB1">git config --global http.postBuffer 524288000</span>
 
@@ -362,9 +381,20 @@ And it pushed in about 10 seconds! Success!
 <br>
 <br>
 
+## **README.md files**
+
+Boring but super important! 
+
+How can people use your project if they don't know how?
+
+<br>
+<br>
+
 ## **Credits** 
 
 [GitHub - merge conflicts guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
 
 [Stack Overflow - Git push taking ages](https://stackoverflow.com/questions/31895557/git-push-taking-ages)
-<!--opt + cmd + v to paste from clipboard directly to markdown doc-->
+
+<!--add to credits - udemy course, kieran-->
+<!--relink pics and add image descriptions-->
