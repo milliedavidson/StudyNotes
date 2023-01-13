@@ -1,5 +1,37 @@
 # **Git & GitHub**
 
+## **Table of Contents**
+
+- [Intro](#intro)
+- [Git Workflow](#git-workflow)
+    - [1. Working Directory](#1-working-directory)
+    - [2. Staging Area/Git Index](#2-staging-areagit-index)
+    - [3. Commit to Repository](#3-commit-to-repository-the-hidden-git-folder)
+    - [4. Remote Repository](#4-remote-repository)
+- [Configure Git](#configure-git)
+- [Set Up Remote & Local Repositories](#set-up-remote--local-repositories)
+    - [1. Make Repository](#1-make-your-repository-on-github-first)
+    - [2. Clone it](#2-clone-it-using-https-clone-url-link-click-the-green-code-button-in-repository)
+    - [3. Check it Works](#3-check-it-works)
+    - [4. Add Files to Index](#4-add-files-to-index)
+    - [5. Commit Changes](#5-commit-changes)
+    - [6. Push changes to GitHub](#6-push-changes-to-github)
+- [General Git Commands](#general-git-commands)
+- [Logs/History](#logshistory)
+- [Deleting/Unstaging changes](#deletingunstaging-changes)
+- [Renaming & Moving Files](#renaming--moving-files)
+- [Git Alias](#git-alias)
+- [Untracking Files](#untracking-files)
+- [Branching](#branching)
+- [Merging](#merging)
+- [Merge Conflicts!](#merge-conflicts)
+- [Pushing & Pulling](#pushing--pulling)
+- [README.md Files](#readmemd-files)
+- [Credits](#credits)
+
+<br>
+<br>
+
 ## **Intro**
 
 A source/version control system. Vast majority of developers & organisations use Git. Some use SVN (Apache Subversion) but it's not that great.
@@ -57,13 +89,13 @@ Check it’s stored this: <span style="color:#54DBB1">Git config --global --list
 <br>
 <br>
 
-## **Set up remote & local repositories**
+## **Set Up Remote & Local Repositories**
 
-### 1.	Make your repository on GitHub first
+### 1.	Make Your Repository on GitHub First
 
 <br>
 
-### 2.	Clone it using HTTPS clone URL link (click the green code button in repository): 
+### 2.	Clone It Using HTTPS Clone URL Link (Click The Green Code Button in Repository): 
 
 ![Picture of HTTPS clone URL link](../images/4812c3c1e6513a28d61177ae6c27933d8812e6b8f7cbb60564cbded8b4051b4f.png)  
  
@@ -89,7 +121,7 @@ In terminal: <span style="color:#54DBB1">git status</span> will tell you which b
 
 <br>
 
-### 3.	Check it works:
+### 3.	Check it Works:
 
 Make sure you’re in repository folder. 
 
@@ -108,7 +140,7 @@ If untracked file, means not been added to Git yet. Need to tell Git about it!!
 <br>
 <br>
 
-### 4. Add files to Index
+### 4. Add Files to Index
 
 <span style="color:#54DBB1">git add name-of-file-here.txt</span> or <span style="color:#54DBB1">git add .</span> (called recursive add??) - adds all the untracked files. <span style="color:#54DBB1">git add .</span> or <span style="color:#54DBB1">git add *</span> - AVOID this when working on a project with others. Don't want to add everyone else's work too; it can get messy quickly.  
 
@@ -122,7 +154,7 @@ Tells us changes are in the staging area, ready to be committed. Staging area de
 
 <br>
 
-### 5.	Commit changes 
+### 5.	Commit Changes 
 
 <span style="color:#54DBB1">git commit -m “your commit message here”</span>
 
@@ -137,7 +169,7 @@ If everything up to date, will say “Working tree clean”. Now in the third st
 <br>
 <br>
 
-### 6.	Push changes to GitHub
+### 6.	Push Changes to GitHub
 
 ***Remember to pull before pushing!***
 
@@ -168,7 +200,7 @@ Verify changes have been successfully made to GitHub by refreshing and checking 
 <br>
 <br>
 
-## **General Git commands**
+## **General Git Commands**
 
 <span style="color:#54DBB1">git init project-name-here</span> or <span style="color:#54DBB1">git init</span> in the folder you want it in - makes an empty git repository locally 
 
@@ -181,8 +213,6 @@ Root-commit message - tells us this is first commit in the repository
 <span style="color:#54DBB1">~</span> tilde goes to home directory~
 
 <span style="color:#54DBB1">~ unzip /Downloads/name-of-file.zip</span> - unzips a zip file
-
-<!--Fork button on the GitHub repository copies someone else’s repository to your own account so you can work on it? Check this-->
 
 <span style="color:#54DBB1">Git pull origin main - updates git repository with your changes on the remote repository</span>
 
@@ -201,7 +231,7 @@ For changes that span multiple files, add to staging area and then commit when f
 <br>
 <br>
 
-## **Logs/history**
+## **Logs/History**
 
 <span style="color:#54DBB1">git help log</span> - shows Git commit history. Top is the last commit you did, working backwards in time as you go down. Press q to exit.
 
@@ -224,7 +254,7 @@ When you commit, Terminal will show something like: master ba5b0f0. This number 
 <br>
 <br>
 
-## **Deleting/unstaging changes**
+## **Deleting/Unstaging Changes**
 
 To **unstage** changes (put it back in your local working directory) - <span style="color:#54DBB1">git reset HEAD file-name-here.txt</span>
 
@@ -239,7 +269,7 @@ Deleting files: if they aren’t tracked by git <span style="color:#54DBB1">git 
 <br>
 <br>
 
-## **Renaming & moving files**
+## **Renaming & Moving Files**
 
 <span style="color:#54DBB1">git mv file-name-here.txt</span> - new-file-name-here.txt - it’s staged the file name change for you! Note, it hasn’t been *committed* though. Good idea to rename files **BEFORE** making changes.
 
@@ -252,7 +282,7 @@ There might be a ../.DS_store_ file that appears when renaming in Finder (just a
 <br>
 <br>
 
-## **Git alias**
+## **Git Alias**
 
 Instead of typing <span style="color:#54DBB1">git log --all --graph --decorate --oneline</span> to get a neat view, can create your own command for this called a **Git alias**. Check if the command already exists by typing it in (will say if doesn’t exist). 
 
@@ -260,12 +290,12 @@ Instead of typing <span style="color:#54DBB1">git log --all --graph --decorate -
 
 To modify aliases, need to open git config file - <span style="color:#54DBB1">mate ~/.gitconfig</span> will open it up in TextMate to edit. A text editor is handy for multiple line commits too.
 
-Alias will be under alias section; modify it there
+Alias will be under alias section; modify it there.
 
 <br>
 <br>
 
-## **Untracking files**
+## **Untracking Files**
 
 If don’t already have a .gitignore file (check with <span style="color:#54DBB1">ls</span>), make one with your text editor - <span style="color:#54DBB1">mate .gitignore</span>
 
@@ -304,6 +334,8 @@ Don’t do everything on main!! Make **feature/topic/develop/sprint branches** t
 <span style="color:#54DBB1">git branch -d new-branch</span> - deletes branch. Can’t delete a branch you’re already on, FYI!
 
 <span style="color:#54DBB1">git checkout -b new-branch-name</span> - creates new branch AND checks out i.e. creates branch and switches you to it
+
+<span style="color:#54DBB1">git config --global init.defaultBranch develop</span> - sets default branch to develop. I did this because I kept accidentally developing on the main branch every time I opened a new Terminal, which was really annoying!
 
 <br>
 <br>
@@ -359,14 +391,14 @@ Once conflicts resolved, git status will say there's an untracked file - that's 
 <br>
 <br>
 
-## **Merge conflicts!**
+## **Merge Conflicts!**
 
 COMMUNICATE WITH YOUR TEAM. Discuss and work out who is doing what, when etc. Everyone has their *own branch* to work on. Don't work on the same file as anyone else - if lots of work needed on a single file, pair up.
 
 <br>
 <br>
 
-## **Pushing & pulling**
+## **Pushing & Pulling**
 
 I'd added a lot of screenshots to this file and when I went to push it to GitHub, it was taking forever. It seemed like it was just hanging.
 
@@ -381,7 +413,7 @@ And it pushed in about 10 seconds! Success!
 <br>
 <br>
 
-## **README.md files**
+## **README.md Files**
 
 Boring but super important! 
 
@@ -395,6 +427,8 @@ How can people use your project if they don't know how?
 [GitHub - merge conflicts guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
 
 [Stack Overflow - Git push taking ages](https://stackoverflow.com/questions/31895557/git-push-taking-ages)
+
+[Sal Ferrarello - change default branch](https://salferrarello.com/git-change-default-branch-to-main/)
 
 <!--add to credits - udemy course, kieran-->
 <!--relink pics and add image descriptions-->
