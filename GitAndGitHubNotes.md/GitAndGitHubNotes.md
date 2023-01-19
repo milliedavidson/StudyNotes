@@ -331,7 +331,8 @@ Don’t do everything on main!! Make **feature/topic/develop/sprint branches** t
 
 <span style="color:#54DBB1">git branch -m my-new-branch new-branch</span> - **-m** moves i.e overwrites and renames the file (here, that would rename to new-branch).
 
-<span style="color:#54DBB1">git branch -d new-branch</span> - deletes branch. Can’t delete a branch you’re already on, FYI!
+<span style="color:#54DBB1">git branch -d new-branch</span> - deletes branch locally. 
+<span style="color:#54DBB1">git push origin --delete new-branch</span> - deletes branch remotely. Can’t delete a branch you’re already on, FYI!
 
 <span style="color:#54DBB1">git checkout -b new-branch-name</span> - creates new branch AND checks out i.e. creates branch and switches you to it
 

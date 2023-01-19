@@ -357,5 +357,3 @@ Regardless of what we discover, we understand and believe that everyone did the 
 ## **Credits**
 
 [Agile Manifesto.org](http://agilemanifesto.org)
-
-
