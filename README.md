@@ -1,11 +1,5 @@
 # Study Notes
 
-## Table of Contents
-
-[Agile & Scrum](#https://github.com/milliedavidson/StudyNotes/blob/main/AgileAndScrum.md)
-[Git & GitHub](https://github.com/milliedavidson/StudyNotes/blob/main/GitAndGitHub.md)
-[Risk Management](https://github.com/milliedavidson/StudyNotes/blob/main/RiskManagement.md)
-
 ## Overview
 
 This repository is a collection of notes from everything I've been learning recently. It's intended to be a backup of my notes, as well as a portfolio to demonstrate my knowledge level and commitment to always improving my skills.
@@ -16,9 +10,26 @@ The notes are often accompanied by screenshots of me putting into practice what 
 
 I review the notes in line with the super helpful [SM-2 spaced repetition schedule](https://www.lifehack.org/851026/spaced-repetition) - highly recommended! As I review notes, I'll correct any spelling/grammar errors and revise bits of information as my knowledge progresses. 
 
+<br>
+<br>
+
 ## How to use this project
 
 Hopefully you can use this as inspiration to create your own study note portfolio (it's a brilliant learning tool). Or perhaps to be convinced that I'm diligent and determined enough to make an excellent addition to your project :)
+
+<br>
+<br>
+
+## Quick links to my notes
+
+[Agile & Scrum](#https://github.com/milliedavidson/StudyNotes/blob/main/AgileAndScrum.md)
+
+[Git & GitHub](https://github.com/milliedavidson/StudyNotes/blob/main/GitAndGitHub.md)
+
+[Risk Management](https://github.com/milliedavidson/StudyNotes/blob/main/RiskManagement.md)
+
+<br>
+<br>
 
 ## Credits
 
