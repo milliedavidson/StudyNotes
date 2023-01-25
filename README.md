@@ -1,5 +1,11 @@
 # Study Notes
 
+## Table of Contents
+
+[Agile & Scrum](#https://github.com/milliedavidson/StudyNotes/blob/main/AgileAndScrum.md)
+[Git & GitHub](https://github.com/milliedavidson/StudyNotes/blob/main/GitAndGitHub.md)
+[Risk Management](https://github.com/milliedavidson/StudyNotes/blob/main/RiskManagement.md)
+
 ## Overview
 
 This repository is a collection of notes from everything I've been learning recently. It's intended to be a backup of my notes, as well as a portfolio to demonstrate my knowledge level and commitment to always improving my skills.
