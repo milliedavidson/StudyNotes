@@ -22,7 +22,7 @@ Hopefully you can use this as inspiration to create your own study note portfoli
 
 ## Quick links to my notes
 
-[Agile & Scrum](#https://github.com/milliedavidson/StudyNotes/blob/main/AgileAndScrum.md)
+[Agile & Scrum](https://github.com/milliedavidson/StudyNotes/blob/main/AgileAndScrum.md)
 
 [Git & GitHub](https://github.com/milliedavidson/StudyNotes/blob/main/GitAndGitHub.md)
 
