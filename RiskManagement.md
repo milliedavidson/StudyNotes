@@ -37,7 +37,7 @@ Typical threats actors include:
 - Business competitors
 - Intelligence gatherers
 - Insiders 
-- Opportunistic 
+- Opportunists
 - AI & bots
 
 <br>
@@ -50,3 +50,35 @@ Risks must be identified and their disruption potential analysed on an **ongoing
 - Communicate risk clearly
 - Employees at *all* levels are responsible for identifying risk 
 - Can't protect against risk if it's not identified!
+
+Isolated, one-off incidents are often the place to start looking!
+
+<br>
+<br>
+
+## **Risk Assessment**
+
+Risk assessment consists of identifying risks, estimating their potential impact and prioritising risks.
+
+e.g. the risk of fire to a building:
+- **Fire alarms** will alert people to leave
+- They are low cost 
+- They reduce the risk of injury
+- But they won't *stop* the fire!
+
+<br>
+
+- **Sprinkler systems** won't alert to a fire
+- But they can minimise the damage
+- Unless they're in a data centre...
+- In which case they will likely destroy all the data systems!!
+- A gas solution would work for a data centre
+- But can be very costly 
+
+A risk assessment determines the best solution for the organisation and the assets they are protecting. This is documented and approved by management. 
+
+<br>
+<br>
+
+## **Risk Treatment**
+

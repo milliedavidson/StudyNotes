@@ -97,7 +97,7 @@ Check it’s stored this: <span style="color:#54DBB1">Git config --global --list
 
 ### 2.	Clone It Using HTTPS Clone URL Link (Click The Green Code Button in Repository): 
 
-![Picture of HTTPS clone URL link](../images/4812c3c1e6513a28d61177ae6c27933d8812e6b8f7cbb60564cbded8b4051b4f.png)  
+![Picture of HTTPS clone URL link](Screenshots/GitAndGitHub2.png)
  
 Go to your computer’s terminal:
 <br>
@@ -432,4 +432,3 @@ How can people use your project if they don't know how?
 [Sal Ferrarello - change default branch](https://salferrarello.com/git-change-default-branch-to-main/)
 
 <!--add to credits - udemy course, kieran-->
-<!--relink pics and add image descriptions-->
