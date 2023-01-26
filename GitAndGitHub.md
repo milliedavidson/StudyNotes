@@ -84,7 +84,7 @@ GitHub. Basically your online cloud backup.
 
 Check it’s stored this: <span style="color:#54DBB1">Git config --global --list</span>
 
-![Git configuration in Terminal](GitAndGitHub1.png)
+![Git configuration in Terminal](Screenshots/GitAndGitHub1.png)
 
 <br>
 <br>
@@ -105,17 +105,17 @@ Go to your computer’s terminal:
  <br>
  <span style="color:#54DBB1">git clone www.github.com/put-repository-link-here.git</span>
 
-![Cloning a GitHub repository](GitAndGitHub3.png)  
+![Cloning a GitHub repository](Screenshots/GitAndGitHub3.png)  
 
 Git copies your GitHub repository to your local system. Confirm it’s now there with  <span style="color:#54DBB1">ls</span>. You should see the README.md file in there:
 
-![Finding the README file in Terminal](2023-01-10-21-15-00.png)
+![Finding the README file in Terminal](Screenshots/2023-01-10-21-15-00.png)
 
 Always start in the repository folder you are working on. Good idea to start with a clean working tree by checking git status. Pull any changes BEFORE pushing.
 
 In terminal: <span style="color:#54DBB1">git status</span> will tell you which branch you’re on.
 
-![Picture of Git status in Terminal](2023-01-10-21-22-32.png)
+![Picture of Git status in Terminal](Screenshots/2023-01-10-21-22-32.png)
 
 ^^ this means it’s up to date with the GitHub branch
 
@@ -133,7 +133,7 @@ The >> outputs contents to where you specify. So this would put the text “Name
 
 Check <span style="color:#54DBB1">git status</span>
 
-![Checking Git status](2023-01-10-21-28-19.png)
+![Checking Git status](Screenshots/2023-01-10-21-28-19.png)
  
 If untracked file, means not been added to Git yet. Need to tell Git about it!!
 
@@ -148,7 +148,7 @@ Can add to staging area AND commit in one go - <span style="color:#54DBB1">git c
 
 Check <span style="color:#54DBB1">git status</span>
 
-![Adding to index and checking Git status](2023-01-10-21-32-10.png)
+![Adding to index and checking Git status](Screenshots/2023-01-10-21-32-10.png)
 
 Tells us changes are in the staging area, ready to be committed. Staging area designed to build up a bunch of changes to be committed as one
 
@@ -158,11 +158,11 @@ Tells us changes are in the staging area, ready to be committed. Staging area de
 
 <span style="color:#54DBB1">git commit -m “your commit message here”</span>
 
-![Commit being made with a message](2023-01-10-21-41-08.png)
+![Commit being made with a message](Screenshots/2023-01-10-21-41-08.png)
 
 <span style="color:#54DBB1">git status</span>
 
-![Git status after commit made](2023-01-10-21-46-08.png)
+![Git status after commit made](Screenshots/2023-01-10-21-46-08.png)
 
 If everything up to date, will say “Working tree clean”. Now in the third stage. This git command is a LOCAL COMMAND, so it won’t be on GitHub yet. 
 
@@ -176,7 +176,7 @@ If everything up to date, will say “Working tree clean”. Now in the third st
 In terminal:
 <span style="color:#54DBB1">git push origin main</span>
  
-![Git push origin main in action](2023-01-10-22-05-06.png)
+![Git push origin main in action](Screenshots/2023-01-10-22-05-06.png)
 
 The origin refers to the remote copy (so in this case, GitHub). Main is the branch we want to push. You’ll be prompted for your username and password (I guess this is why people set up tokens?). Although I’m never prompted for some reason?
 
@@ -187,15 +187,15 @@ remote: http://github.com/settings/emails"
 
 Went to the link and turned off this setting
 
-![Keep my email address private checkbox](2023-01-10-22-07-18.png)
+![Keep my email address private checkbox](Screenshots/2023-01-10-22-07-18.png)
  
 All good now
 
-![Git push origin main successful attempt](2023-01-10-22-08-01.png)
+![Git push origin main successful attempt](Screenshots/2023-01-10-22-08-01.png)
  
 Verify changes have been successfully made to GitHub by refreshing and checking it there. 
 
-![Test file added to GitHub repository](2023-01-10-22-08-55.png)
+![Test file added to GitHub repository](Screenshots/2023-01-10-22-08-55.png)
 
 <br>
 <br>
@@ -216,7 +216,7 @@ Root-commit message - tells us this is first commit in the repository
 
 <span style="color:#54DBB1">Git pull origin main - updates git repository with your changes on the remote repository</span>
 
-![Git pull origin main in Terminal](2023-01-11-09-27-08.png)
+![Git pull origin main in Terminal](Screenshots/2023-01-11-09-27-08.png)
 
 **ALWAYS pull before pushing!**
 
@@ -299,7 +299,7 @@ Alias will be under alias section; modify it there.
 
 If don’t already have a .gitignore file (check with <span style="color:#54DBB1">ls</span>), make one with your text editor - <span style="color:#54DBB1">mate .gitignore</span>
 
-![Checking for a git ignore file in Terminal](2023-01-11-10-23-33.png)
+![Checking for a git ignore file in Terminal](Screenshots/2023-01-11-10-23-33.png)
  
 Patterns for .gitignore file:
 -	Specific file e.g. **a-file.ext**
@@ -319,15 +319,15 @@ Don’t do everything on main!! Make **feature/topic/develop/sprint branches** t
 
 <span style="color:#54DBB1">git branch -a</span> - lists local and remote branches. There will be an asterisk by current active branch
 
-![Picture of which branch I'm on](2023-01-11-11-20-16.png)
+![Picture of which branch I'm on](Screenshots/2023-01-11-11-20-16.png)
  
 <span style="color:#54DBB1">git branch new-branch-here</span> - makes a new branch
 
-![New branch created in Terminal](2023-01-11-11-22-08.png)
+![New branch created in Terminal](Screenshots/2023-01-11-11-22-08.png)
  
 <span style="color:#54DBB1">git checkout new-branch-here</span> - switches branches to the specified one
 
-![Switching branch with git checkout](2023-01-11-11-22-49.png)
+![Switching branch with git checkout](Screenshots/2023-01-11-11-22-49.png)
 
 <span style="color:#54DBB1">git branch -m my-new-branch new-branch</span> - **-m** moves i.e overwrites and renames the file (here, that would rename to new-branch).
 
@@ -347,37 +347,37 @@ When merging changes: **REVIEW them first!**
 
 <span style="color:#54DBB1">git diff main develop</span> - first reference branch + second reference branch. Shows you differences between those two branches. Hence the diff
 
-![Comparing branches with git diff](2023-01-11-11-27-23.png)
+![Comparing branches with git diff](Screenshots/2023-01-11-11-27-23.png)
 
 <span style="color:#54DBB1">git difftool main develop</span> - brings up visual merge differences, like you see on GitHub.
 
 <span style="color:#54DBB1">git merge develop</span> - source branch I want merged into my ***current*** branch. Can delete that branch after merge. This is called fast-forwarding. 
 
-![Merging branch into current one](2023-01-11-11-29-11.png)
+![Merging branch into current one](Screenshots/2023-01-11-11-29-11.png)
 
 I did this one time and got a merge conflict:
 
-![](2023-01-11-11-30-07.png)
+![Terminal showing merge conflict](Screenshots/2023-01-11-11-30-07.png)
 
 Clicked “resolve in merge editor” in my text editor:
 
-![](2023-01-11-11-30-37.png)
+![Option to resolve in Merge Editor in VS Code](Screenshots/2023-01-11-11-30-37.png)
   
 Found the conflict:
 
-![](2023-01-11-11-31-02.png)
+![Merge conflict highlighted in VS Code](Screenshots/2023-01-11-11-31-02.png)
  
 Clicked “accept incoming” on the part I wanted to commit. Clicked “complete merge”:
 
-![](2023-01-11-11-31-24.png)
+![Option to complete Merge in VS Code](Screenshots/2023-01-11-11-31-24.png)
  
 Checked git status - all good to try merging develop to main again:
 
-![](2023-01-11-11-32-06.png)
+![Checking git status in Terminal](Screenshots/2023-01-11-11-32-06.png)
 
 Got the error message again!
 
-![](2023-01-11-11-32-41.png)
+![Terminal showing the merge conflict again](Screenshots/2023-01-11-11-32-41.png)
 
 Think I forgot to commit the merge 😂. Committed it in Visual Studio Code source control. Then synced changes in same place. All fixed now.
 
@@ -407,7 +407,7 @@ I increased the **post buffer** size - <span style="color:#54DBB1">git config --
 
 Checked it configured correctly - <span style="color:#54DBB1">git config --get http.postBuffer</span>
 
-![Increasing and checking post buffer size](2023-01-11-13-39-08.png)
+![Increasing and checking post buffer size](Screenshots/2023-01-11-13-39-08.png)
 
 And it pushed in about 10 seconds! Success!
 
