@@ -82,6 +82,47 @@ A risk assessment determines the best solution for the organisation and the asse
 
 ## **Risk Treatment**
 
+Deciding what the best actions are to take to mitigate the risk. What to take into account:
+
+**- Avoidance**
+**- Acceptance**
+**- Mitigation**
+**- Transfer**
+
+**Risk avoidance:** Avoid/eliminate the risk completely! This is often the case when the risk will have such a high impact that it's better to entirely shut down the operation.
+
+**Risk acceptance:** Take no action to reduce the risk and just accept it; carry on with the risky activity. This often happens because the impact would be negligible. 
+
+**Risk mitigation:** Prevent or reduce the possibility of the risk and its impact. Most common way to manage risk. Mitigation can include security controls and new policies/procedures/standards.
+
+**Risk transference:** Transferring the risk to another party i.e. an insurance company. They will deal with any financial impact, not the organisation. 
+
+<br>
+<br>
+
+## **Risk Identification**
+
+An example risk is training new staff - it's time-consuming, a costly investment and represents an increased cyber risk to the organisation! 
+
+Once risks are identified, prioritise and anaylse them. Use **qualitative** and/or **quantative** risk analysis.
+
+**QUALITATIVE** - risk is assigned a descriptor, such as low, medium and high.
+
+**QUANTATIVE** - risk impact and likelihood are assigned numerical values. 
+
+Understanding what the organisation aims to achieve and what processes they need to achieve that will help identify risk. 
+
+A risk matrix is handy for prioritising risk:
+
+![A risk matrix - a vertical arrow on the left is labelled 'probability'. A horizontal arrow is along the bottom and labelled 'impact'. There is a grid of 4 risk possibilities: bottom left says low probability, low impact. Bottom right says low probability, high impact. Upper left says high probability, low impact. Upper right says high probability, high impact.](Screenshots/Low%20impact.png)
+
+<br>
+<br>
+
+## Making decisions
+
+**Risk tolerance/risk appetite**.
+
 Under construction 🏗️
 
 Check back soon!
