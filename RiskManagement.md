@@ -1,13 +1,34 @@
 # **Risk Management**
 
-Should be a continuous process to assess and analyse risk. Each organisation decides what risk means to them and how much of it they will accept.
+It should be a continuous process to assess and analyse risk. Each organisation decides what risk means to them and how much of it they will accept. 
 
 <br>
 <br>
 
-## **What is risk?**
+## **Table of Contents**
+
+[What is Risk?](#what-is-risk-⚠️)
+
+[Assets, Vulnerabilities & Threats](#assets-vulnerabilities--threats)
+
+[Risk Identification](#risk-identification)
+
+- [Risk Matrix](#risk-matrix)
+
+[Risk Assessment](#risk-assessment)
+
+[Risk Treatment](#risk-treatment)
+
+[Making Decisions](#making-decisions)
+
+<br>
+<br>
+
+## **What is Risk? ⚠️**
 
 **How much an entity is threatened by a situation that may or may not have happened yet.**
+
+<br>
 
 Risk is measured by:
 - The *impact* if the situation happened
@@ -65,6 +86,10 @@ Understanding what the organisation aims to achieve and what processes they need
 
 A risk matrix is handy for prioritising risk:
 
+<br>
+
+### **Risk Matrix**
+
 ![A risk matrix - a vertical arrow on the left is labelled 'probability'. A horizontal arrow is along the bottom and labelled 'impact'. There is a grid of 4 risk possibilities: bottom left says low probability, low impact. Bottom right says low probability, high impact. Upper left says high probability, low impact. Upper right says high probability, high impact.](Screenshots/Low%20impact.png)
 
 <br>
@@ -98,10 +123,15 @@ A risk assessment determines the best solution for the organisation and the asse
 
 Deciding what the best actions are to take to mitigate the risk. What to take into account:
 
-**- Avoidance**
-**- Acceptance**
-**- Mitigation**
-**- Transfer**
+- **Avoidance** 
+
+- **Acceptance**
+
+- **Mitigation**
+
+- **Transfer**
+
+<br>
 
 **Risk avoidance:** Avoid/eliminate the risk completely! This is often the case when the risk will have such a high impact that it's better to entirely shut down the operation.
 
@@ -114,9 +144,9 @@ Deciding what the best actions are to take to mitigate the risk. What to take in
 <br>
 <br>
 
-## Making decisions
+## **Making Decisions**
 
-**Risk tolerance/risk appetite**
+<!--**Risk tolerance/risk appetite**-->
 
 Under construction 🏗️
 
