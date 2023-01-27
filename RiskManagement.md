@@ -53,6 +53,20 @@ Risks must be identified and their disruption potential analysed on an **ongoing
 
 Isolated, one-off incidents are often the place to start looking!
 
+An example risk is training new staff - it's time-consuming, a costly investment and represents an increased cyber risk to the organisation! 
+
+Once risks are identified, prioritise and anaylse them. Use **qualitative** and/or **quantative** risk analysis.
+
+**QUALITATIVE** - risk is assigned a descriptor, such as low, medium and high.
+
+**QUANTATIVE** - risk impact and likelihood are assigned numerical values. 
+
+Understanding what the organisation aims to achieve and what processes they need to achieve that will help identify risk. 
+
+A risk matrix is handy for prioritising risk:
+
+![A risk matrix - a vertical arrow on the left is labelled 'probability'. A horizontal arrow is along the bottom and labelled 'impact'. There is a grid of 4 risk possibilities: bottom left says low probability, low impact. Bottom right says low probability, high impact. Upper left says high probability, low impact. Upper right says high probability, high impact.](Screenshots/Low%20impact.png)
+
 <br>
 <br>
 
@@ -100,28 +114,9 @@ Deciding what the best actions are to take to mitigate the risk. What to take in
 <br>
 <br>
 
-## **Risk Identification**
-
-An example risk is training new staff - it's time-consuming, a costly investment and represents an increased cyber risk to the organisation! 
-
-Once risks are identified, prioritise and anaylse them. Use **qualitative** and/or **quantative** risk analysis.
-
-**QUALITATIVE** - risk is assigned a descriptor, such as low, medium and high.
-
-**QUANTATIVE** - risk impact and likelihood are assigned numerical values. 
-
-Understanding what the organisation aims to achieve and what processes they need to achieve that will help identify risk. 
-
-A risk matrix is handy for prioritising risk:
-
-![A risk matrix - a vertical arrow on the left is labelled 'probability'. A horizontal arrow is along the bottom and labelled 'impact'. There is a grid of 4 risk possibilities: bottom left says low probability, low impact. Bottom right says low probability, high impact. Upper left says high probability, low impact. Upper right says high probability, high impact.](Screenshots/Low%20impact.png)
-
-<br>
-<br>
-
 ## Making decisions
 
-**Risk tolerance/risk appetite**.
+**Risk tolerance/risk appetite**
 
 Under construction 🏗️
 
