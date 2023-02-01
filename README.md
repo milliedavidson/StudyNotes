@@ -1,6 +1,6 @@
-# Study Notes
+# **Study Notes 📚**
 
-## Overview
+## **Overview**
 
 This repository is a collection of notes from everything I've been learning recently. It's intended to be a backup of my notes, as well as a portfolio to demonstrate my knowledge level and commitment to always improving my skills.
 
@@ -13,14 +13,14 @@ I review the notes in line with the super helpful [SM-2 spaced repetition schedu
 <br>
 <br>
 
-## How to use this project
+## **How to use this project**
 
 Hopefully you can use this as inspiration to create your own study note portfolio (it's a brilliant learning tool). Or perhaps to be convinced that I'm diligent and determined enough to make an excellent addition to your project :)
 
 <br>
 <br>
 
-## Quick links to my notes
+## **Quick links to my notes**
 
 [Agile & Scrum](https://github.com/milliedavidson/StudyNotes/blob/main/AgileAndScrum.md)
 
@@ -28,11 +28,11 @@ Hopefully you can use this as inspiration to create your own study note portfoli
 
 [Risk Management](https://github.com/milliedavidson/StudyNotes/blob/main/RiskManagement.md)
 
-[Security Controls](https://github.com/milliedavidson/StudyNotes/blob/main/SecurityControls.md)\
+[Security Controls](https://github.com/milliedavidson/StudyNotes/blob/main/SecurityControls.md)
 
 <br>
 <br>
 
-## Credits
+## **Credits**
 
 Layout of this file inspired by [freecodecamp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/).
