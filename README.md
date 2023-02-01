@@ -28,6 +28,8 @@ Hopefully you can use this as inspiration to create your own study note portfoli
 
 [Risk Management](https://github.com/milliedavidson/StudyNotes/blob/main/RiskManagement.md)
 
+[Security Controls](https://github.com/milliedavidson/StudyNotes/blob/main/SecurityControls.md)
+
 <br>
 <br>
 

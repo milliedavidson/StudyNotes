@@ -1,6 +1,6 @@
 # **Security Controls**
 
-The physical, technical and operational controls that preserve the confidentiality, integrity and availability of an information system. The aim of them is to reduce risk. 
+The physical, technical and operational controls that preserve the confidentiality, integrity and availability of an information system. The aim of them is to reduce [risk](https://github.com/milliedavidson/StudyNotes/blob/main/RiskManagement.md).
 
 <br>
 <br>
