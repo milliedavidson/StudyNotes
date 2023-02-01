@@ -146,8 +146,20 @@ Deciding what the best actions are to take to mitigate the risk. What to take in
 
 ## **Making Decisions**
 
-<!--**Risk tolerance/risk appetite**-->
+Deciding the risk tolerance/risk appetite to something is ultimately down to executive management/board of directors. 
 
-Under construction 🏗️
+<br>
 
-Check back soon!
+**Risk tolerance** = how much risk the company is willing to accept 
+
+The amount of risk tolerance will vary between organizations, as well as internally too. A good place to determine this risk tolerance is understanding how senior management feel about it. 
+
+Often, it's decided by location - e.g. organisations in Japan will need to plan for their frequent earthquakes,as they are at a much higher risk. Whereas organisations in the UK are at a very low risk to earthquakes, but a higher risk to flooding, depending on their exact location. 
+
+The company might have a very low tolerance to downtime - perhaps they run 24 hour servers. So, they might invest in backup generators for more assurance that there won't be a power cut. 
+
+<br>
+
+**Is it possible to avoid risk?**
+
+YES. Risks can be mitigated by identifying them, characterising them and determining their potential for disruption to the organisation. 
