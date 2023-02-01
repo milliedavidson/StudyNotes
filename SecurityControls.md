@@ -7,6 +7,11 @@ The physical, technical and operational controls that preserve the confidentiali
 
 ## **Table of Contents**
 
+[Physical Controls](#physical-controls)
+
+[Technical/Logical Controls](#technicallogical-controls)
+
+[Administrative/Managerial Controls](#administrativemanagerial-controls)
 
 <br>
 <br>
@@ -32,7 +37,21 @@ They often control or prevent movement in the organisation's location, like when
 
 Often, these physical controls are incorporated with [technical controls](#technicallogical-controls), such as a badge reader connected to a door lock. 
 
+<br>
+<br>
+
 ### **Technical/Logical Controls**
+Computer systems/networks implement these controls directly. They include:
+
+- Settings stored as data
+- Settings in hardware (e.g. switches)
+- Managed through a software GUI
+
+<br>
+<br>
 
 ### **Administrative/Managerial Controls**
+Under construction 🏗️
+Be back soon!
+
 
