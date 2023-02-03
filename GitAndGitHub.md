@@ -437,4 +437,6 @@ How can people use your project if they don't know how?
 
 [Sal Ferrarello - change default branch](https://salferrarello.com/git-change-default-branch-to-main/)
 
+[Stack Overflow - git add . vs git commit -a](https://stackoverflow.com/questions/3541647/git-add-vs-git-commit-a)
+
 <!--add to credits - udemy course, kieran-->
