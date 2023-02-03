@@ -228,6 +228,12 @@ Tracked files - any file committed into the git repository, index or staging are
 
 For changes that span multiple files, add to staging area and then commit when finished is a good idea
 
+<span style="color:#54DBB1">git commit -a</span>  - add to staging area and commit in one go for *all* tracked files. Note: you'll be prompted to enter a commit message. Once written, press **esc** to exit insert mode and type **:wq** to write and quit (i.e. return to normal terminal)
+
+**git commit -a** is very similar to **git add -u && git commit** but not quite the same:
+
+ **git add -u** stages changes, *except for new files*. **git add -a** stages ALL changes to tracked files, exactly as you see it, including new files. **git commit -a** stages ALL changes and commits. 
+
 <br>
 <br>
 
