@@ -351,11 +351,9 @@ Don’t do everything on main!! Make **feature/topic/develop/sprint branches** t
 
 When merging changes: **REVIEW them first!**
 
-<span style="color:#54DBB1">git diff main develop</span> - first reference branch + second reference branch. Shows you differences between those two branches. Hence the diff
+<span style="color:#54DBB1">git diff main develop</span> - first reference branch + second reference branch. Shows you differences between those two branches. Hence the diff. Can just view 1 branch too.
 
 ![Comparing branches with git diff](Screenshots/2023-01-11-11-27-23.png)
-
-<span style="color:#54DBB1">git difftool main develop</span> - brings up visual merge differences, like you see on GitHub.
 
 <span style="color:#54DBB1">git merge develop</span> - source branch I want merged into my ***current*** branch. Can delete that branch after merge. This is called fast-forwarding. 
 
